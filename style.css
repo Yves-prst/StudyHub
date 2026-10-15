@@ -1,0 +1,155 @@
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f1f3f6;
+    color: #222;
+}
+
+a { color: #2563eb; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.topo {
+    background: #1e293b;
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.topo a, .topo .quem { color: #fff; }
+.logo { font-size: 20px; font-weight: bold; }
+nav { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; }
+
+.conteudo { max-width: 800px; margin: 20px auto; padding: 0 15px; }
+
+.caixa {
+    background: #fff;
+    border: 1px solid #dde1e7;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+.caixa.pequena { max-width: 380px; margin: 30px auto; }
+.caixa h3, .caixa h1 { margin-top: 0; }
+
+.destaque { border: 2px solid #f59e0b; background: #fffbeb; }
+.selo { color: #b45309; font-weight: bold; margin-bottom: 5px; }
+
+.grade { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px; }
+.cartao {
+    background: #fff;
+    border: 1px solid #dde1e7;
+    border-radius: 8px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+input[type=text], input[type=email], input[type=password], textarea, select {
+    width: 100%;
+    padding: 8px;
+    margin: 4px 0 10px;
+    border: 1px solid #c4c9d1;
+    border-radius: 5px;
+    font: inherit;
+}
+
+button {
+    background: #2563eb;
+    color: #fff;
+    border: 0;
+    padding: 8px 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    font: inherit;
+}
+button:hover { opacity: .9; }
+button.perigo { background: #dc2626; }
+button.secundario { background: #64748b; }
+
+.linha { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+.linha input, .linha select { margin: 0; flex: 1; min-width: 140px; width: auto; }
+
+.erro { background: #fee2e2; color: #991b1b; padding: 8px; border-radius: 5px; }
+.ok { background: #dcfce7; color: #166534; padding: 8px; border-radius: 5px; }
+.aviso { background: #e0f2fe; color: #075985; padding: 10px; border-radius: 5px; }
+
+small { color: #666; }
+
+.tag {
+    font-size: 11px;
+    padding: 2px 7px;
+    border-radius: 10px;
+    color: #fff;
+    background: #64748b;
+}
+.tag.moderador { background: #7c3aed; }
+.tag.especialista { background: #d97706; }
+.tag.banido { background: #dc2626; }
+.topo .tag { margin-left: 4px; }
+.quem { display: inline-flex; align-items: center; gap: 6px; }
+
+/* Foto de perfil */
+.avatar {
+    border-radius: 50%;
+    object-fit: cover;
+    vertical-align: middle;
+    background: #64748b;
+    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+img.avatar { display: inline-block; }
+.perfil-cabecalho { display: flex; gap: 18px; align-items: center; flex-wrap: wrap; }
+.perfil-cabecalho h1 { margin-bottom: 4px; }
+
+/* Respostas às respostas */
+.comentarios { margin-top: 12px; padding-left: 14px; border-left: 3px solid #e5e7eb; }
+.comentarios h4 { margin: 0 0 6px; font-size: 13px; color: #555; }
+.comentario { display: flex; gap: 8px; padding: 6px 0; border-bottom: 1px solid #f1f3f6; }
+.comentario .corpo { flex: 1; }
+.comentario p { margin: 3px 0; }
+.comentario form button { padding: 2px 8px; font-size: 12px; }
+.comentar-form { display: flex; gap: 8px; margin-top: 8px; }
+.comentar-form input { margin: 0; flex: 1; }
+.comentar-form button { white-space: nowrap; }
+
+/* Avaliação por estrelas */
+.estrelas { color: #f59e0b; letter-spacing: 2px; font-size: 18px; }
+.nota { margin: 8px 0; }
+.avaliar { display: flex; align-items: center; gap: 5px; flex-wrap: wrap; margin-bottom: 8px; }
+.avaliar button {
+    background: #e5e7eb;
+    color: #333;
+    padding: 4px 9px;
+    font-size: 13px;
+}
+.avaliar button.ativa { background: #f59e0b; color: #fff; }
+
+/* Perfil */
+.estatisticas { display: flex; gap: 12px; flex-wrap: wrap; margin: 12px 0; }
+.estatisticas div {
+    flex: 1;
+    min-width: 100px;
+    background: #f1f3f6;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+.estatisticas strong { font-size: 22px; }
+
+table { width: 100%; border-collapse: collapse; }
+th, td { text-align: left; padding: 8px; border-bottom: 1px solid #e5e7eb; vertical-align: middle; }
+
+@media (max-width: 600px) {
+    table, tr, td, th { font-size: 13px; }
+}

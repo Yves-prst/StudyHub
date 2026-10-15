@@ -1,0 +1,4 @@
+# Nesta pasta ficam só as fotos de perfil: nunca executar scripts aqui
+<FilesMatch "\.(php|phtml|php3|php4|php5|phar|cgi|pl)$">
+    Require all denied
+</FilesMatch>
